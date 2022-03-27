@@ -35,3 +35,8 @@ const jawsEl = document.getElementById("jaws");
 
 // EVENT LISTENERS 
 startGameButtonEl.addEventListener('click' , playRound);
+
+
+// FUNCTIONS
+function initialize()
+function render()
