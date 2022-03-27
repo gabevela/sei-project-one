@@ -27,3 +27,8 @@ let correctClicks = 0;
 let wrongClicks = 0;
 let swimmerStatus = 0;
 let sharkFinPosition = 0;
+
+// CACHED DOM ELEMENTS 
+const sharkFinPositionEl = document.getElementById("shark-fin-position");
+const swimmerStatusEl = document.getElementById("swimmer-status");
+const jawsEl = document.getElementById("jaws");
