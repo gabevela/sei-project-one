@@ -32,3 +32,6 @@ let sharkFinPosition = 0;
 const sharkFinPositionEl = document.getElementById("shark-fin-position");
 const swimmerStatusEl = document.getElementById("swimmer-status");
 const jawsEl = document.getElementById("jaws");
+
+// EVENT LISTENERS 
+startGameButtonEl.addEventListener('click' , playRound);
