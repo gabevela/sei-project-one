@@ -18,3 +18,12 @@ const oceanAnimals = new array [
   "SQUID",
   "PLANKTON",
   "SEAHORSE"]
+
+  // APP'S STATE VARIABLES
+let randomOceanAnimal = "ocean";
+let playerInputLetter = "a";
+let playerInputWord = "abc";
+let correctClicks = 0;
+let wrongClicks = 0;
+let swimmerStatus = 0;
+let sharkFinPosition = 0;
