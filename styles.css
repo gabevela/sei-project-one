@@ -4,7 +4,8 @@
 
 body {
     background-repeat: no-repeat;
-    height: 300px;
+    columns: pink;
+    height: 450px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -12,6 +13,11 @@ body {
     background-color: #cccccc;
   }
 
+.head-title {
+    position: relative;
+    align-content: center;
+
+  }
 .index-main {
     background-image: url("assets/vecteezy/oceanMain.svg");
     color: navy;
@@ -20,4 +26,18 @@ body {
 .index-game {
     background-image: url("assets/vecteezy/oceanGame.svg");
     color: navy;
+}
+
+.svg-credits-main {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: rgba(0, 255, 255, 0.308);
+}
+
+.svg-credits-game {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: rgba(124, 143, 248, 0.411);
 }
