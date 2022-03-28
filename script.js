@@ -40,3 +40,4 @@ startGameButtonEl.addEventListener('click' , playRound);
 // FUNCTIONS
 function initialize()
 function render()
+
