@@ -2,7 +2,22 @@
     box-sizing: border-box;
 }
 
-#svg-credits{
+body {
+    background-repeat: no-repeat;
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-color: #cccccc;
+  }
 
-    
+.index-main {
+    background-image: url("assets/vecteezy/oceanMain.svg");
+    color: navy;
+}
+
+.index-game {
+    background-image: url("assets/vecteezy/oceanGame.svg");
+    color: navy;
 }
