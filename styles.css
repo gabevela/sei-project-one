@@ -41,3 +41,17 @@ body {
     left: 0;
     color: rgba(124, 143, 248, 0.411);
 }
+
+.secret-word {
+    padding: 5px 5px;
+    width: fit-content;
+    background-color: rgba(62, 180, 235, 0.322);
+
+}
+
+.previous-letter, .current-letter {
+    padding: 2px 2px;
+    width: fit-content;
+    background-color: rgba(25, 106, 160, 0.356);
+
+}
