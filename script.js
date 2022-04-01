@@ -42,12 +42,11 @@ const jawsEl = document.getElementById("jaws");
 // FUNCTIONS
 // function initialize()
 // function render()
-function totalGuesses(
-
-)
+// function totalGuesses  (  constructor  )
 
 //////////////////////////////////////////////
-let secretWord = "DOLPHIN";
+let secretWord = 'DOLPHIN';
 let guessLetter = "P";
 let indexOfFirst = secretWord.indexOf(guessLetter);
 console.log(indexOfFirst);
+
