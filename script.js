@@ -8,27 +8,18 @@
 // const oceanAnimals = new array [ 
 //   "ORCA",
 //   "DOLPHIN",
-//   "JELLYFISH",
 //   "CLOWNFISH",
-//   "STARFISH",
-//   "OCTOPUS",
 //   "LOBSTER",
 //   "CRAB",
-//   "SQUID",
-//   "PLANKTON",
-//   "SEAHORSE"]
+//   "SQUID"]
 
-  // APP'S STATE VARIABLES
-let randomOceanAnimal = "ocean";
-let playerInputLetter = "a";
-let playerInputWord = "abc";
-let correctClicks = 0;
-let wrongClicks = 0;
-let swimmerStatus = 0;
-let sharkFinPosition = 0;
+  // APP's STATE VARIABLES
+let secretWord = "Dog";
+let lengthOfSecrectWord = secretWord.length;
+let guessedLetter = "";
 
 // CACHED DOM ELEMENTS 
-const letterBtnEl = document.querySelectorAll('[data-letter]');
+const letterBtnEl = document.getElementById("Aa");
 const startGameBtnEl = document.getElementById("data-start-game");
 const endGameBtnEl = document.getElementById("data-end-game");
 
@@ -37,16 +28,31 @@ const scubaEl = document.getElementById("swimmer-status");
 const jawsEl = document.getElementById("jaws");
 
 // EVENT LISTENERS 
-// startGameButtonEl.addEventListener('click' , playRound);
+//startGameButtonEl.addEventListener('click' , "function");
+letterBtnEl.addEventListener('click' , function importGuessedLetter(){
+  guessedLetter = document.getElementById("Aa").innerHTML;
+  // document.getElementById("Aa").innerHTML = guessedLetter;
+  console.log("DOM KEYBOARD LETTER PRESSED");
+  console.log(guessedLetter);
+   // USE .textContent
+   return
+ });
+
+// let new Array = [
+// //insert  vlaues with a push method
+
+
+// ]
 
 // FUNCTIONS
-// function initialize()
-// function render()
-// function totalGuesses  (  constructor  )
+function onLetterPressDown() {
+  let indexOfFirst = secretWord.indexOf(guessedLetter);
+  if (indexOfFirst >= 0) {
+      console.log("CORRECT LETTER PRESSED!", guessedLetter, "is at index", indexOfFirst, "of the secret word.");
+      document.getElementById(indexOfFirst).innerHTML = guessedLetter;
 
-//////////////////////////////////////////////
-let secretWord = 'DOLPHIN';
-let guessLetter = "P";
-let indexOfFirst = secretWord.indexOf(guessLetter);
-console.log(indexOfFirst);
-
+  } else {
+      console.log("WRONG LETTER PRESSED")
+  }
+}
+onLetterPressDown()
