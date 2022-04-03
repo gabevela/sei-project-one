@@ -47,7 +47,7 @@ letterBtnListEl.forEach(function (letterBtnEl) {
       } else {
         console.log("WRONG LETTER PRESSED")
       }
-      event.target.disabled = true
+      event.target.disabled = true;
     }
     onLetterPressDown()
   })
@@ -96,6 +96,7 @@ letterBtnListEl.forEach(function (letterBtnEl) {
 
 
 startGameBtnEl.addEventListener('click', function startgame() {
+  event.target.disabled = true;
   console.log("START BUTTON PRESSED!");
   let r = Math.floor(Math.random() * 8);
   console.log("line # 101 random number:" , r);
@@ -112,7 +113,7 @@ startGameBtnEl.addEventListener('click', function startgame() {
       elementDash.id = i;
     }
   }
-  return
+  blankDashesHint();
   // oceanAnimals is an array containing random secret words. 
 });
 // console.log("line 108", secretWord);
