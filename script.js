@@ -14,12 +14,12 @@ const oceanAnimals = [
   "SQUID",
   "SHARK",
   "SEAHORSE",
-  ];
+];
 
 // APP's STATE VARIABLES
-let secretWord = "";
-console.log("the secret word is:", secretWord);
-let lengthOfSecrectWord = secretWord.length;
+// let secretWord = "";
+// console.log("the secret word is:", secretWord);
+// let lengthOfSecrectWord = secretWord.length;
 
 // CACHED DOM ELEMENTS 
 const letterBtnListEl = document.querySelectorAll("[data-letter]");
@@ -34,7 +34,7 @@ letterBtnListEl.forEach(function (letterBtnEl) {
   letterBtnEl.addEventListener('click', function (event) {
     console.log("Letter clicked:", event.target.innerHTML);
     guessedLetter = event.target.innerHTML;
-    console.log("LINE 34 GUESSED LETTER:", guessedLetter);
+    console.log("LINE 37 GUESSED LETTER:", guessedLetter);
     function onLetterPressDown() {
       let indexOfFirst = secretWord.indexOf(guessedLetter);
       if (indexOfFirst >= 0) {
@@ -53,10 +53,15 @@ letterBtnListEl.forEach(function (letterBtnEl) {
   })
 });
 
-startGameBtnEl.addEventListener('click' , function startgame(){
-  console.log("START BUTTON PRESSED!");
-  
-});
+// startGameBtnEl.addEventListener('click' , function startgame(){
+//   console.log("START BUTTON PRESSED!");
+//   let r = Math.floor(Math.random() * 8) 
+//   console.log(r);
+//   console.log(oceanAnimals[r]);
+//   oceanAnimals[r] = secretWord;
+//   blankDashesHint()
+//     // oceanAnimals is an array containing random secret words. 
+//   });
 // letterBtnEl.addEventListener('click' , function importGuessedLetter(){
 //   guessedLetter = document.getElementById("Aa").innerHTML;
 //   console.log("DOM KEYBOARD LETTER PRESSED");
@@ -69,15 +74,15 @@ startGameBtnEl.addEventListener('click' , function startgame(){
 // object to hold the previous letters 
 
 // FUNCTIONS
-function blankDashesHint() {
-  const letterContainerDash = document.getElementById("letter-placeholder")
-  for (let i = 0; i < lengthOfSecrectWord; i++) {
-    let elementDash = document.createElement("button");
-    letterContainerDash.appendChild(elementDash);
-    elementDash.id = i;
-  }
-}
-blankDashesHint()
+// function blankDashesHint() {
+//   const letterContainerDash = document.getElementById("letter-placeholder")
+//   for (let i = 0; i < lengthOfSecrectWord; i++) {
+//     let elementDash = document.createElement("button");
+//     letterContainerDash.appendChild(elementDash);
+//     elementDash.id = i;
+//   }
+// }
+// blankDashesHint()
 
 // function onLetterPressDown(guessedLetter) {
 //   let indexOfFirst = secretWord.indexOf(guessedLetter);
@@ -88,3 +93,26 @@ blankDashesHint()
 //       console.log("WRONG LETTER PRESSED")
 //   }
 // };
+
+
+startGameBtnEl.addEventListener('click', function startgame() {
+  console.log("START BUTTON PRESSED!");
+  let r = Math.floor(Math.random() * 8);
+  console.log("line # 101 random number:" , r);
+  console.log("line 102 ", oceanAnimals[r]);
+  let secretWord = oceanAnimals[r];
+  let lengthOfSecrectWord = secretWord.length;
+  console.log("line 105 the secret word is:", secretWord);
+  console.log("line 106, the secret word is:", secretWord, " at array index:", r);
+  function blankDashesHint() {
+    const letterContainerDash = document.getElementById("letter-placeholder")
+    for (let i = 0; i < lengthOfSecrectWord; i++) {
+      let elementDash = document.createElement("button");
+      letterContainerDash.appendChild(elementDash);
+      elementDash.id = i;
+    }
+  }
+  return
+  // oceanAnimals is an array containing random secret words. 
+});
+// console.log("line 108", secretWord);
