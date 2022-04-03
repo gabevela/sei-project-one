@@ -17,7 +17,7 @@ const oceanAnimals = [
 ];
 
 // APP's STATE VARIABLES
-  let secretWord = "";
+let secretWord = "";
 console.log("the secret word is:", secretWord);
 let lengthOfSecrectWord = secretWord.length;
 
@@ -114,11 +114,13 @@ function startgame() {
   startGameBtnEl.disabled = true;
   console.log("START BUTTON PRESSED!");
   let r = Math.floor(Math.random() * 8);
-  console.log("line # 101 random number:" , r);
+  console.log("line # 101 random number:", r);
   console.log("line 102 ", oceanAnimals[r]);
   secretWord = oceanAnimals[r];
+  lengthOfSecrectWord = secretWord.length;
   // let lengthOfSecrectWord = secretWord.length;
   console.log("line 105 the secret word is:", secretWord);
   console.log("line 106, the secret word is:", secretWord, " at array index:", r);
   blankDashesHint();
-}
+  return secretWord;
+};
