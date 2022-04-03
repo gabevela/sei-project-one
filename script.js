@@ -5,25 +5,25 @@
 // const imageTwo = ;
 // const soundOne = ;
 // const soundTwo = ;
-// const oceanAnimals = new array [ 
-//   "ORCA",
-//   "DOLPHIN",
-//   "CLOWNFISH",
-//   "LOBSTER",
-//   "CRAB",
-//   "SQUID"]
+const oceanAnimals = [
+  "ORCA",
+  "DOLPHIN",
+  "CLOWNFISH",
+  "LOBSTER",
+  "CRAB",
+  "SQUID",
+  "SHARK",
+  "SEAHORSE",
+  ];
 
 // APP's STATE VARIABLES
-let secretWord = "OCEANANIMAL";
+let secretWord = "";
 console.log("the secret word is:", secretWord);
 let lengthOfSecrectWord = secretWord.length;
 
-//reset / play again function 
-
-
 // CACHED DOM ELEMENTS 
 const letterBtnListEl = document.querySelectorAll("[data-letter]");
-// const startGameBtnEl = document.getElementById("data-start-game");
+const startGameBtnEl = document.getElementById("data-start-game");
 // const endGameBtnEl = document.getElementById("data-end-game");
 // const sharkFinPositionEl = document.getElementById("shark-fin-position");
 // const scubaEl = document.getElementById("swimmer-status");
@@ -47,12 +47,16 @@ letterBtnListEl.forEach(function (letterBtnEl) {
       } else {
         console.log("WRONG LETTER PRESSED")
       }
-      // event.target.disabled = true
+      event.target.disabled = true
     }
     onLetterPressDown()
   })
 });
-//startGameButtonEl.addEventListener('click' , "function");
+
+startGameBtnEl.addEventListener('click' , function startgame(){
+  console.log("START BUTTON PRESSED!");
+  
+});
 // letterBtnEl.addEventListener('click' , function importGuessedLetter(){
 //   guessedLetter = document.getElementById("Aa").innerHTML;
 //   console.log("DOM KEYBOARD LETTER PRESSED");
