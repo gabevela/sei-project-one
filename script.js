@@ -14,26 +14,32 @@ const oceanAnimals = [
   "SQUID",
   "SHARK",
   "SEAHORSE",
+  "CUTTLEFISH",
+  "JELLYFISH",
+  "MONKFISH",
+  "PENGUIN",
+  "ANGELFISH",
+  "ANCHOVIES",
+  "BARRACUDA",
+  "OCTOPUS",
+  "TUNA",
+  "VIPERFISH",
+  "STONEFISH",
+  "SALMON"
 ];
-
 // APP's STATE VARIABLES
 let secretWord = "";
-console.log("the secret word is:", secretWord);
 let lengthOfSecrectWord = secretWord.length;
-
+let sharkDistance = 50;
 // CACHED DOM ELEMENTS 
 const letterBtnListEl = document.querySelectorAll("[data-letter]");
 const startGameBtnEl = document.getElementById("data-start-game");
-// const endGameBtnEl = document.getElementById("data-end-game");
 // const sharkFinPositionEl = document.getElementById("shark-fin-position");
 // const scubaEl = document.getElementById("swimmer-status");
 // const jawsEl = document.getElementById("jaws");
-
 // EVENT LISTENERS 
 startGameBtnEl.addEventListener('click', startgame);
-
-
-letterBtnListEl.forEach(function (letterBtnEl) {
+letterBtnListEl.forEach(function(letterBtnEl) {
   letterBtnEl.addEventListener('click', function (event) {
     console.log("Letter clicked:", event.target.innerHTML);
     guessedLetter = event.target.innerHTML;
@@ -48,34 +54,14 @@ letterBtnListEl.forEach(function (letterBtnEl) {
           }
         }
       } else {
-        console.log("WRONG LETTER PRESSED")
+        sharkDistance -= 10;
+        console.log("Wrong letter! Shark distance:" , sharkDistance , "meters!")
       }
       event.target.disabled = true;
     }
     onLetterPressDown()
   })
-});
-
-// startGameBtnEl.addEventListener('click' , function startgame(){
-//   console.log("START BUTTON PRESSED!");
-//   let r = Math.floor(Math.random() * 8) 
-//   console.log(r);
-//   console.log(oceanAnimals[r]);
-//   oceanAnimals[r] = secretWord;
-//   blankDashesHint()
-//     // oceanAnimals is an array containing random secret words. 
-//   });
-// letterBtnEl.addEventListener('click' , function importGuessedLetter(){
-//   guessedLetter = document.getElementById("Aa").innerHTML;
-//   console.log("DOM KEYBOARD LETTER PRESSED");
-//   console.log(guessedLetter);
-//   onLetterPressDown();
-//   // PUSH METHOD NEEDED TO SAVE THE CORRECT LETTER TO THE ARRAY TO 
-//   //BUILD THE secretWord UP FROM SCRATCH ONCE THE PLAYER KEEPS PRESSING LETTERS
-//  });
-// let new Array = [ insert  vlaues with a push method]
-// object to hold the previous letters 
-
+})
 // FUNCTIONS
 function blankDashesHint() {
   const letterContainerDash = document.getElementById("letter-placeholder")
@@ -85,42 +71,16 @@ function blankDashesHint() {
     elementDash.id = i;
   }
 }
-// function onLetterPressDown(guessedLetter) {
-//   let indexOfFirst = secretWord.indexOf(guessedLetter);
-//   if (indexOfFirst >= 0) {
-//       console.log("CORRECT LETTER PRESSED!", guessedLetter, "is at index", indexOfFirst, "of the secret word.");
-//       document.getElementById(indexOfFirst).innerHTML = guessedLetter;
-//   } else {
-//       console.log("WRONG LETTER PRESSED")
-//   }
-// };
-
-
-//startGameBtnEl.addEventListener('click', startgame());
-//   event.target.disabled = true;
-//   console.log("START BUTTON PRESSED!");
-//   let r = Math.floor(Math.random() * 8);
-//   console.log("line # 101 random number:" , r);
-//   console.log("line 102 ", oceanAnimals[r]);
-//   secretWord = oceanAnimals[r];
-//   // let lengthOfSecrectWord = secretWord.length;
-//   console.log("line 105 the secret word is:", secretWord);
-//   console.log("line 106, the secret word is:", secretWord, " at array index:", r);
-//   blankDashesHint();
-// });
-// console.log("line 108", secretWord);
-
 function startgame() {
   startGameBtnEl.disabled = true;
-  console.log("START BUTTON PRESSED!");
-  let r = Math.floor(Math.random() * 8);
-  console.log("line # 101 random number:", r);
-  console.log("line 102 ", oceanAnimals[r]);
+  document.getElementById("letter-button").style.visibility = "visible";
+  // letterBtnEl.disabled = true;
+  let r = Math.floor(Math.random() * 20);
+  console.log("Start Game button pressed! Random number:", r);
   secretWord = oceanAnimals[r];
   lengthOfSecrectWord = secretWord.length;
-  // let lengthOfSecrectWord = secretWord.length;
-  console.log("line 105 the secret word is:", secretWord);
-  console.log("line 106, the secret word is:", secretWord, " at array index:", r);
+  console.log("The secret word is:", secretWord, " at oceanAnimals array index:", r);
   blankDashesHint();
   return secretWord;
 };
+

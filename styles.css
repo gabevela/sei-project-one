@@ -3,55 +3,61 @@
 }
 
 body {
-    background-repeat: no-repeat;
-    columns: pink;
-    height: 450px;
+    background-repeat  : no-repeat;
+    columns            : pink;
+    height             : 450px;
     background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    background-color: #cccccc;
-  }
+    background-repeat  : no-repeat;
+    background-size    : cover;
+    position           : relative;
+    background-color   : #cccccc;
+}
+
+#letter-button {
+    visibility: hidden;
+}
 
 .head-title {
-    position: relative;
+    position     : relative;
     align-content: center;
 
-  }
+}
+
 .index-main {
     background-image: url("assets/vecteezy/oceanMain.svg");
-    color: navy;
+    color           : navy;
 }
 
 .index-game {
     background-image: url("assets/vecteezy/oceanGame.svg");
-    color: navy;
+    color           : navy;
 }
 
 .svg-credits-main {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    color: rgba(0, 255, 255, 0.308);
+    bottom  : 0;
+    left    : 0;
+    color   : rgba(0, 255, 255, 0.308);
 }
 
 .svg-credits-game {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    color: rgba(124, 143, 248, 0.411);
+    bottom  : 0;
+    left    : 0;
+    color   : rgba(124, 143, 248, 0.411);
 }
 
 .secret-word {
-    padding: 5px 5px;
-    width: fit-content;
+    padding         : 5px 5px;
+    width           : fit-content;
     background-color: rgba(62, 180, 235, 0.322);
 
 }
 
-.previous-letter, .current-letter {
-    padding: 2px 2px;
-    width: fit-content;
+.previous-letter,
+.current-letter {
+    padding         : 2px 2px;
+    width           : fit-content;
     background-color: rgba(25, 106, 160, 0.356);
 
 }
