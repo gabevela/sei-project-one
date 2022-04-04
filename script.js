@@ -39,7 +39,7 @@ const startGameBtnEl = document.getElementById("data-start-game");
 // const jawsEl = document.getElementById("jaws");
 // EVENT LISTENERS 
 startGameBtnEl.addEventListener('click', startgame);
-letterBtnListEl.forEach(function(letterBtnEl) {
+letterBtnListEl.forEach(function (letterBtnEl) {
   letterBtnEl.addEventListener('click', function (event) {
     console.log("Letter clicked:", event.target.innerHTML);
     guessedLetter = event.target.innerHTML;
@@ -54,10 +54,19 @@ letterBtnListEl.forEach(function(letterBtnEl) {
           }
         }
       } else {
-
         sharkDistance -= 10;
-        console.log("Wrong letter! Shark distance:" , sharkDistance , "meters!")
+        console.log("Wrong letter! Shark distance:", sharkDistance, "meters!")
+        if (sharkDistance == 40) {
+          document.getElementById("shark-container-one").style.visibility = "visible";
+        } else if (sharkDistance == 30) {
+          document.getElementById("shark-container-two").style.visibility = "visible";
+        } else if (sharkDistance == 20) {
+          document.getElementById("shark-container-three").style.visibility = "visible";
+        } else if (sharkDistance == 10) {
+          document.getElementById("shark-container-four").style.visibility = "visible";
+        } else { alert("GAME LOST") }
       }
+
       event.target.disabled = true;
     }
     onLetterPressDown()
@@ -77,6 +86,7 @@ function startgame() {
   startGameBtnEl.disabled = true;
   document.getElementById("letter-button").style.visibility = "visible";
   // letterBtnEl.disabled = true;
+  document.getElementById("scuba-container").style.visibility = "visible";
   let r = Math.floor(Math.random() * 20);
   console.log("Start Game button pressed! Random number:", r);
   secretWord = oceanAnimals[r];
