@@ -32,6 +32,14 @@ body {
     color                : navy;
 }
 
+.index-game-over {
+    display              : grid;
+    grid-template-columns: auto;
+    grid-template-rows   : 30px 200px 100px 10px 10px 10px 10px;
+    background-image     : url("assets/vecteezy/oceanGame.svg");
+    color                : rgb(134, 31, 0);
+}
+
 .top-row-main {
     display              : grid;
     grid-template-columns: 6fr 2fr .5fr;

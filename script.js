@@ -31,6 +31,9 @@ const oceanAnimals = [
 let secretWord = "";
 let lengthOfSecrectWord = secretWord.length;
 let sharkDistance = 50;
+const jawsIntro = new Audio('assets/jawsIntro.mp3');
+const drowningDead = new Audio('assets/drowningDead.mp3');
+const dangerGame = new Audio('assets/dangerDead.mp3');
 // CACHED DOM ELEMENTS 
 const letterBtnListEl = document.querySelectorAll("[data-letter]");
 const startGameBtnEl = document.getElementById("data-start-game");
@@ -64,7 +67,23 @@ letterBtnListEl.forEach(function (letterBtnEl) {
           document.getElementById("shark-container-three").style.visibility = "visible";
         } else if (sharkDistance == 10) {
           document.getElementById("shark-container-four").style.visibility = "visible";
-        } else { alert("GAME LOST") }
+        } else {
+          document.getElementById("letter-placeholder").style.visibility = "hidden";
+          document.getElementById("letter-button").style.visibility = "hidden";
+          window.location.href = "indexLostGame.html";
+          // function endGame() {
+          //   drowningDead.play();
+          // }
+        }
+        // if (sharkDistance == 10) {
+        //   drowningDead.play();
+        //   window.location.href = "indexLostGame.html";
+        // } else {
+        //   console.log("DEAD");
+        // }
+
+        event.target.disabled = true;
+        endGame()
       }
 
       event.target.disabled = true;
@@ -83,6 +102,7 @@ function blankDashesHint() {
   }
 }
 function startgame() {
+  jawsIntro.play();
   startGameBtnEl.disabled = true;
   document.getElementById("letter-button").style.visibility = "visible";
   // letterBtnEl.disabled = true;
