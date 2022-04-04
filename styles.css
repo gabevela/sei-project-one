@@ -13,16 +13,6 @@ body {
     background-color   : #cccccc;
 }
 
-.container {
-    display: grid;
-}
-
-.head-title {
-    position     : relative;
-    align-content: center;
-
-}
-
 .index-main {
     background-image: url("assets/vecteezy/oceanMain.svg");
     color           : navy;
@@ -30,16 +20,25 @@ body {
 
 .index-game {
     display: grid;
-    grid-template-columns: repeat(4, 100px);
-    grid-template-rows: auto;
+    grid-template-columns: auto;
+    grid-template-rows: 45px 100px 100px 100px 100px 100px;
     background-image: url("assets/vecteezy/oceanGame.svg");
     color           : navy;
 }
 
+.head-title {
+    display: grid;
+}
 
+.start-game-button {
+    display: grid;
+    max-width: 50px;
+}
 
-#letter-button {
-    visibility: hidden;
+.shark-scuba-container {
+    display: grid;
+    grid-template-columns: 100px;
+
 }
 
 .svg-credits-main {
@@ -54,4 +53,8 @@ body {
     bottom  : 0;
     left    : 0;
     color   : rgba(124, 143, 248, 0.411);
+}
+
+#letter-button {
+    visibility: hidden;
 }
