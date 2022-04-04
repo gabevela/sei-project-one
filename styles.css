@@ -15,6 +15,13 @@ body {
 
 #letter-button {
     visibility: hidden;
+    background-color: aquamarine;
+}
+
+.container {
+    display: flex;
+    width  : ;
+
 }
 
 .head-title {

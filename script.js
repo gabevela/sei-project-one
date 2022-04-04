@@ -54,6 +54,7 @@ letterBtnListEl.forEach(function(letterBtnEl) {
           }
         }
       } else {
+        
         sharkDistance -= 10;
         console.log("Wrong letter! Shark distance:" , sharkDistance , "meters!")
       }
