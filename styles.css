@@ -21,24 +21,74 @@ body {
 .index-game {
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 45px 100px 100px 100px 100px 100px;
+    grid-template-rows: 45px 25px 100px 100px 100px 100px 100px;
     background-image: url("assets/vecteezy/oceanGame.svg");
     color           : navy;
 }
 
-.head-title {
+.game-title {
     display: grid;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-size: xx-large;
 }
 
 .start-game-button {
     display: grid;
-    max-width: 50px;
+    max-width: 30px;
+    max-height: 25px;
 }
 
 .shark-scuba-container {
     display: grid;
-    grid-template-columns: 100px;
+    grid-template-columns: 50px 50px 50px 50px 50px 50px 50px 50px 50px;
+    max-width: 50px;
+    max-height: 50px;
+    max-block-size: 50px;
+    max-inline-size: 50px;
 
+}
+
+.shark-container-one img{
+    max-width: 100%;
+    max-height: auto;
+}
+
+.shark-container-two img{
+    max-width: 100%;
+    max-height: auto;
+}
+
+.shark-container-three img{
+    max-width: 100%;
+    max-height: auto;
+}
+
+.shark-container-four img{
+    max-width: 100%;
+    max-height: auto;
+}
+
+.scuba-container img{
+    max-width: 100%;
+    max-height: auto;
+}
+
+/* .letter-dash-container {
+    display: grid;
+    max-width: 10px;
+    max-height: 10px;
+} */
+
+.letter-button-container{
+    display: grid;
+    max-width: 20px;
+    max-height: 20px;
+}
+
+.end-game-button{
+    display: grid;
+    max-width: 35px;
+    max-height: 25px;
 }
 
 .svg-credits-main {
