@@ -13,15 +13,8 @@ body {
     background-color   : #cccccc;
 }
 
-#letter-button {
-    visibility: hidden;
-    background-color: aquamarine;
-}
-
 .container {
-    display: flex;
-    width  : ;
-
+    display: grid;
 }
 
 .head-title {
@@ -36,8 +29,17 @@ body {
 }
 
 .index-game {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: auto;
     background-image: url("assets/vecteezy/oceanGame.svg");
     color           : navy;
+}
+
+
+
+#letter-button {
+    visibility: hidden;
 }
 
 .svg-credits-main {
@@ -52,19 +54,4 @@ body {
     bottom  : 0;
     left    : 0;
     color   : rgba(124, 143, 248, 0.411);
-}
-
-.secret-word {
-    padding         : 5px 5px;
-    width           : fit-content;
-    background-color: rgba(62, 180, 235, 0.322);
-
-}
-
-.previous-letter,
-.current-letter {
-    padding         : 2px 2px;
-    width           : fit-content;
-    background-color: rgba(25, 106, 160, 0.356);
-
 }

@@ -54,7 +54,7 @@ letterBtnListEl.forEach(function(letterBtnEl) {
           }
         }
       } else {
-        
+
         sharkDistance -= 10;
         console.log("Wrong letter! Shark distance:" , sharkDistance , "meters!")
       }
@@ -63,6 +63,7 @@ letterBtnListEl.forEach(function(letterBtnEl) {
     onLetterPressDown()
   })
 })
+
 // FUNCTIONS
 function blankDashesHint() {
   const letterContainerDash = document.getElementById("letter-placeholder")
