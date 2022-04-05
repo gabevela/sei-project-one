@@ -15,7 +15,7 @@ body {
 
 .index-main {
     display              : grid;
-    grid-template-rows   : 1fr;
+    grid-template-rows   : 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-columns: 1fr;
     background-image     : url("assets/vecteezy/oceanMain.svg");
     color                : rgb(17, 138, 160);
@@ -27,7 +27,7 @@ body {
 .index-game {
     display              : grid;
     grid-template-columns: auto;
-    grid-template-rows   : 30px 20px 200px 50px 10px 10px 10px 10px 10px;
+    grid-template-rows   : 30px 20px 150px 50px 50px 10px 10px 10px 10px;
     background-image     : url("assets/vecteezy/oceanGame.svg");
     color                : navy;
 }
@@ -42,7 +42,7 @@ body {
 
 .top-row-main {
     display              : grid;
-    grid-template-columns: 6fr 2fr .5fr;
+    grid-template-columns: 6fr 2fr;
     align-items          : top;
     justify-items        : center;
 }
@@ -110,23 +110,21 @@ body {
     max-height: auto;
 }
 
-.dead-title {
-    display      : grid;
-    max-width    : 400%;
-    max-height   : 400%;
-    font-family  : "Comic Sans MS", "Comic Sans", cursive;
-    font-size    : xx-large;
-    font-weight  : bolder;
-    color        : rgb(134, 31, 0);
-    align-content: center;
-    justify-items: center;
-}
-
 .scuba-container img {
     max-width      : 200%;
     max-height     : auto;
     justify-content: baseline;
     opacity        : 100%;
+}
+
+.dead-title {
+    display      : grid;
+    font-family  : "Comic Sans MS", "Comic Sans", cursive;
+    font-size    : xx-large;
+    font-weight  : bolder;
+    color        : rgb(134, 31, 0);
+    /* align-content: center; */
+    justify-items: center;
 }
 
 .letter-dash-container {
@@ -155,6 +153,14 @@ body {
     font-family: "Comic Sans MS", "Comic Sans", cursive;
     font-size  : xx-small;
     font-weight: 100;
+}
+
+.scuba-diver-main img{ 
+    size: 30px;
+    max-width: 20%;
+    max-height: auto;
+
+
 }
 
 #letter-button {
