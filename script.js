@@ -71,9 +71,12 @@ letterBtnListEl.forEach(function (letterBtnEl) {
           document.getElementById("shark-container-four").style.visibility = "hidden";
           document.getElementById("scuba-container").style.visibility = "hidden";
           // window.location.href = "indexLostGame.html";
+          document.getElementById("game-title").style.opacity = 0.15;
+          document.getElementById("shark-container-five").style.visibility = "visible";
+          document.getElementById("dead-title").style.visibility = "visible";
         }
         event.target.disabled = true;
-        endGame()
+        // endGame()
       }
       event.target.disabled = true;
     }

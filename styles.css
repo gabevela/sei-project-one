@@ -14,20 +14,20 @@ body {
 }
 
 .index-main {
-    display: grid;
-    grid-template-rows: 1fr;
+    display              : grid;
+    grid-template-rows   : 1fr;
     grid-template-columns: 1fr;
-    background-image: url("assets/vecteezy/oceanMain.svg");
-    color           : rgb(17, 138, 160);
-    font-family     : "Comic Sans MS", "Comic Sans", cursive;
-    font-size       : xx-large;
-    font-weight     : bolder;
+    background-image     : url("assets/vecteezy/oceanMain.svg");
+    color                : rgb(17, 138, 160);
+    font-family          : "Comic Sans MS", "Comic Sans", cursive;
+    font-size            : xx-large;
+    font-weight          : bolder;
 }
 
 .index-game {
     display              : grid;
     grid-template-columns: auto;
-    grid-template-rows   : 30px 200px 100px 10px 10px 10px 10px;
+    grid-template-rows   : 30px 20px 200px 50px 10px 10px 10px 10px 10px;
     background-image     : url("assets/vecteezy/oceanGame.svg");
     color                : navy;
 }
@@ -35,7 +35,7 @@ body {
 .index-game-over {
     display              : grid;
     grid-template-columns: auto;
-    grid-template-rows   : 30px 200px 100px 10px 10px 10px 10px;
+    grid-template-rows   : 35px 10px 80px 10px 10px 10px 10px;
     background-image     : url("assets/vecteezy/oceanGame.svg");
     color                : rgb(134, 31, 0);
 }
@@ -49,7 +49,8 @@ body {
 
 .top-row {
     display              : grid;
-    grid-template-columns: 6fr 1fr 1fr;
+    max-width            : 100%;
+    grid-template-columns: 8fr 3fr 3fr 1fr 1fr 1fr;
     align-items          : top;
     justify-items        : center;
 }
@@ -58,6 +59,7 @@ body {
     font-family: "Comic Sans MS", "Comic Sans", cursive;
     font-size  : xx-large;
     font-weight: bolder;
+    opacity    : .99;
 }
 
 .start-game-button {
@@ -72,7 +74,7 @@ body {
 
 .shark-scuba-container {
     display              : grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 3fr 1.5fr;
+    grid-template-columns: .9fr 1.1fr 1.5fr 1.9fr 1fr 2fr 1fr 1fr;
     grid-template-rows   : auto;
     justify-items        : center;
     align-items          : center;
@@ -84,10 +86,8 @@ body {
 }
 
 .shark-container-one img {
-    max-width  : 100%;
-    max-height : auto;
-    align-items: baseline;
-
+    max-width : 100%;
+    max-height: auto;
 }
 
 .shark-container-two img {
@@ -105,8 +105,25 @@ body {
     max-height: auto;
 }
 
+.shark-container-five img {
+    max-width : 170%;
+    max-height: auto;
+}
+
+.dead-title {
+    display      : grid;
+    max-width    : 400%;
+    max-height   : 400%;
+    font-family  : "Comic Sans MS", "Comic Sans", cursive;
+    font-size    : xx-large;
+    font-weight  : bolder;
+    color        : rgb(134, 31, 0);
+    align-content: center;
+    justify-items: center;
+}
+
 .scuba-container img {
-    max-width      : 100%;
+    max-width      : 200%;
     max-height     : auto;
     justify-content: baseline;
     opacity        : 100%;
@@ -126,17 +143,17 @@ body {
     left       : 0;
     color      : rgba(0, 255, 255, 0.308);
     font-family: "Comic Sans MS", "Comic Sans", cursive;
-    font-size  :xx-small;
+    font-size  : xx-small;
     font-weight: 100;
 }
 
 .svg-credits-game {
-    position: absolute;
-    bottom  : 0;
-    left    : 0;
-    color   : rgba(124, 143, 248, 0.411);
+    position   : absolute;
+    bottom     : 0;
+    left       : 0;
+    color      : rgba(124, 143, 248, 0.411);
     font-family: "Comic Sans MS", "Comic Sans", cursive;
-    font-size  :xx-small;
+    font-size  : xx-small;
     font-weight: 100;
 }
 
@@ -161,5 +178,17 @@ body {
 }
 
 #scuba-container {
+    visibility: hidden;
+}
+
+#shark-container-five {
+    max-width : auto;
+    max-height: 200px;
+    visibility: hidden;
+}
+
+#dead-title {
+    max-width : auto;
+    max-height: 200px;
     visibility: hidden;
 }
