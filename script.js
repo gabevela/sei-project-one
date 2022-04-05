@@ -1,10 +1,7 @@
 // SHARK ATTACK!!! Just like hangman, but better.
-// Don't let the shark catch up to the swimmer!
-// You have 3 attempts to guess the OCEAN ANIMAL!
+// Don't let the shark catch up to the scuba diver!
+// You have 5 attempts to guess the OCEAN ANIMAL!
 // CONSTANTS
-// const imageTwo = ;
-// const soundOne = ;
-// const soundTwo = ;
 const oceanAnimals = [
   "ORCA",
   "DOLPHIN",
@@ -33,13 +30,10 @@ let lengthOfSecrectWord = secretWord.length;
 let sharkDistance = 50;
 const jawsIntro = new Audio('assets/jawsIntro.mp3');
 const drowningDead = new Audio('assets/drowningDead.mp3');
-const dangerGame = new Audio('assets/dangerDead.mp3');
+const dangerGame = new Audio('assets/dangerGame.mp3');
 // CACHED DOM ELEMENTS 
 const letterBtnListEl = document.querySelectorAll("[data-letter]");
 const startGameBtnEl = document.getElementById("data-start-game");
-// const sharkFinPositionEl = document.getElementById("shark-fin-position");
-// const scubaEl = document.getElementById("swimmer-status");
-// const jawsEl = document.getElementById("jaws");
 // EVENT LISTENERS 
 startGameBtnEl.addEventListener('click', startgame);
 letterBtnListEl.forEach(function (letterBtnEl) {
@@ -67,31 +61,25 @@ letterBtnListEl.forEach(function (letterBtnEl) {
           document.getElementById("shark-container-three").style.visibility = "visible";
         } else if (sharkDistance == 10) {
           document.getElementById("shark-container-four").style.visibility = "visible";
-        } else {
+        } else { 
+          jawsIntro.play();
           document.getElementById("letter-placeholder").style.visibility = "hidden";
           document.getElementById("letter-button").style.visibility = "hidden";
-          window.location.href = "indexLostGame.html";
-          // function endGame() {
-          //   drowningDead.play();
-          // }
+          document.getElementById("shark-container-one").style.visibility = "hidden";
+          document.getElementById("shark-container-two").style.visibility = "hidden";
+          document.getElementById("shark-container-three").style.visibility = "hidden";
+          document.getElementById("shark-container-four").style.visibility = "hidden";
+          document.getElementById("scuba-container").style.visibility = "hidden";
+          // window.location.href = "indexLostGame.html";
         }
-        // if (sharkDistance == 10) {
-        //   drowningDead.play();
-        //   window.location.href = "indexLostGame.html";
-        // } else {
-        //   console.log("DEAD");
-        // }
-
         event.target.disabled = true;
         endGame()
       }
-
       event.target.disabled = true;
     }
     onLetterPressDown()
   })
 })
-
 // FUNCTIONS
 function blankDashesHint() {
   const letterContainerDash = document.getElementById("letter-placeholder")
@@ -102,10 +90,9 @@ function blankDashesHint() {
   }
 }
 function startgame() {
-  jawsIntro.play();
+  dangerGame.play();
   startGameBtnEl.disabled = true;
   document.getElementById("letter-button").style.visibility = "visible";
-  // letterBtnEl.disabled = true;
   document.getElementById("scuba-container").style.visibility = "visible";
   let r = Math.floor(Math.random() * 20);
   console.log("Start Game button pressed! Random number:", r);
