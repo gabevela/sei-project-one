@@ -24,6 +24,12 @@ body {
     font-weight          : bolder;
 }
 
+.game-status{
+    display              : grid;
+    grid-template-rows   : 1fr;
+    grid-template-columns: 1fr 1fr;
+}
+
 .index-game {
     display              : grid;
     grid-template-columns: auto;
@@ -50,7 +56,7 @@ body {
 .top-row {
     display              : grid;
     max-width            : 100%;
-    grid-template-columns: 8fr 3fr 3fr 1fr 1fr 1fr;
+    grid-template-columns: 8fr 3fr 3fr 3fr 1fr 1fr 1fr;
     align-items          : top;
     justify-items        : center;
 }
@@ -127,6 +133,17 @@ body {
     justify-items: center;
 }
 
+
+.level-won {
+    display      : grid;
+    font-family  : "Comic Sans MS", "Comic Sans", cursive;
+    font-size    : xx-large;
+    font-weight  : bolder;
+    color        : rgb(0, 134, 16);
+    /* align-content: center; */
+    justify-items: center;
+}
+
 .letter-dash-container {
     align-items    : center;
     justify-content: center;
@@ -194,6 +211,18 @@ body {
 }
 
 #dead-title {
+    max-width : auto;
+    max-height: 200px;
+    visibility: hidden;
+}
+
+#level-won {
+    max-width : auto;
+    max-height: 200px;
+    visibility: hidden;
+}
+
+#next-level-button {
     max-width : auto;
     max-height: 200px;
     visibility: hidden;

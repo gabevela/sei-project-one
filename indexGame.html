@@ -14,6 +14,9 @@
         <div id="game-title" class="game-title">
             <div>SHARK ATTACK</div>
         </div>
+        <div class="next-level-button">
+            <button id="next-level-button" onClick="document.location.reload(true)">Next Level</button>
+        </div>
         <div class="start-game-button">
             <button data-start-game id="data-start-game">PLAY!</button>
         </div>
@@ -30,8 +33,13 @@
         <div class="scuba-container" id="scuba-container"><img src="assets/vecteezy/scuba.png"></div>
         <div class="shark-container-five" id="shark-container-five"><img src="assets/vecteezy/sharkInverted.png"></div>
     </div>
-    <div id="dead-title" class="dead-title">
-        <div>ATTACKED!!</div>
+    <div id="game-status" class="game-status">
+        <div id="dead-title" class="dead-title">
+            <div>ATTACKED!!</div>
+        </div>
+        <div id="level-won" class="level-won">
+            <div>LEVEL CLEARED</div>
+        </div>
     </div>
     <div class="letter-dash-container" id="letter-placeholder"></div>
     <div class="letter-button-container" id="letter-button">

@@ -28,13 +28,17 @@ const oceanAnimals = [
 let secretWord = "";
 let lengthOfSecrectWord = secretWord.length;
 let sharkDistance = 50;
+let correctLetters = 0;
 const jawsIntro = new Audio('assets/jawsIntro.mp3');
 const drowningDead = new Audio('assets/drowningDead.mp3');
 const dangerGame = new Audio('assets/dangerGame.mp3');
+const levelOne = new Audio('assets/levelWon.mp3');
 // CACHED DOM ELEMENTS 
 const letterBtnListEl = document.querySelectorAll("[data-letter]");
 const startGameBtnEl = document.getElementById("data-start-game");
+const nextLevelBtnEl = document.getElementById("next-level-button");
 // EVENT LISTENERS 
+//nextLevelBtnEl.addEventListener('click', startgame);
 startGameBtnEl.addEventListener('click', startgame);
 letterBtnListEl.forEach(function (letterBtnEl) {
   letterBtnEl.addEventListener('click', function (event) {
@@ -42,12 +46,37 @@ letterBtnListEl.forEach(function (letterBtnEl) {
     guessedLetter = event.target.innerHTML;
     console.log("LINE 37 GUESSED LETTER:", guessedLetter);
     function onLetterPressDown() {
+      // for (let g = 0; g <= lengthOfSecrectWord; g++) {
+      //   if (i == lengthOfSecrectWord) {
+      //     console.log("player won!")
+      //   } else {
+      //     console.log("game in play")
+      //   }
+      // }
       let indexOfFirst = secretWord.indexOf(guessedLetter);
       if (indexOfFirst >= 0) {
         for (let j = 0; j < lengthOfSecrectWord; j++) {
           if (secretWord[j] == guessedLetter) {
+            correctLetters++;
+            if (correctLetters == lengthOfSecrectWord) {
+              console.log("game won");
+              jawsIntro.pause();
+              dangerGame.pause();
+              levelOne.play();
+              document.getElementById("letter-placeholder").style.visibility = "hidden";
+              document.getElementById("letter-button").style.visibility = "hidden";
+              document.getElementById("shark-container-one").style.visibility = "hidden";
+              document.getElementById("shark-container-two").style.visibility = "hidden";
+              document.getElementById("shark-container-three").style.visibility = "hidden";
+              document.getElementById("shark-container-four").style.visibility = "hidden";
+              document.getElementById("scuba-container").style.visibility = "hidden";
+              document.getElementById("game-title").style.opacity = 0.15;
+              document.getElementById("level-won").style.visibility = "visible";
+              document.getElementById("next-level-button").style.visibility = "visible";
+            }
             console.log("CORRECT LETTER PRESSED!", guessedLetter, "is at index", indexOfFirst, "of the secret word.");
             document.getElementById(j).innerHTML = guessedLetter;
+            console.log(j);
           }
         }
       } else {
@@ -61,8 +90,9 @@ letterBtnListEl.forEach(function (letterBtnEl) {
           document.getElementById("shark-container-three").style.visibility = "visible";
         } else if (sharkDistance == 10) {
           document.getElementById("shark-container-four").style.visibility = "visible";
-        } else { 
+        } else {
           jawsIntro.play();
+          dangerGame.pause();
           document.getElementById("letter-placeholder").style.visibility = "hidden";
           document.getElementById("letter-button").style.visibility = "hidden";
           document.getElementById("shark-container-one").style.visibility = "hidden";
@@ -70,13 +100,11 @@ letterBtnListEl.forEach(function (letterBtnEl) {
           document.getElementById("shark-container-three").style.visibility = "hidden";
           document.getElementById("shark-container-four").style.visibility = "hidden";
           document.getElementById("scuba-container").style.visibility = "hidden";
-          // window.location.href = "indexLostGame.html";
           document.getElementById("game-title").style.opacity = 0.15;
           document.getElementById("shark-container-five").style.visibility = "visible";
           document.getElementById("dead-title").style.visibility = "visible";
         }
         event.target.disabled = true;
-        // endGame()
       }
       event.target.disabled = true;
     }
