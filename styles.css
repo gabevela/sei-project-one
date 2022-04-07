@@ -1,4 +1,4 @@
-* {
+ * {
     box-sizing: border-box;
 }
 
@@ -27,13 +27,13 @@ body {
 .game-status{
     display              : grid;
     grid-template-rows   : 1fr;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
 }
 
 .index-game {
     display              : grid;
     grid-template-columns: auto;
-    grid-template-rows   : 30px 20px 150px 50px 50px 10px 10px 10px 10px;
+    grid-template-rows   : 35px 10px 100px 10px 50px 10px 10px 10px 10px;
     background-image     : url("assets/vecteezy/oceanGame.svg");
     color                : navy;
 }
@@ -57,13 +57,12 @@ body {
     display              : grid;
     max-width            : 100%;
     grid-template-columns: 8fr 3fr 3fr 3fr 1fr 1fr 1fr;
-    align-items          : top;
     justify-items        : center;
 }
 
 .game-title {
     font-family: "Comic Sans MS", "Comic Sans", cursive;
-    font-size  : xx-large;
+    font-size  : large;
     font-weight: bolder;
     opacity    : .99;
 }
@@ -84,11 +83,6 @@ body {
     grid-template-rows   : auto;
     justify-items        : center;
     align-items          : center;
-    /* max-width         : 50px;
-    max-height           : 50px;
-    max-block-size       : 50px;
-    max-inline-size      : 50px; */
-
 }
 
 .shark-container-one img {
@@ -144,13 +138,35 @@ body {
     justify-items: center;
 }
 
-.letter-dash-container {
+.letter-dash-container  {
     align-items    : center;
     justify-content: center;
     flex-wrap      : wrap;
+    display: flex;
+
+
 }
 
-.letter-button-container {}
+.letter-dash-container > button {
+    background-color: whitesmoke;
+    padding-right: 20px;
+    align-items: center;
+    justify-items: center;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.letter-button-container >button {
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    background-color: whitesmoke;
+    align-items: center;
+    justify-items: center;
+    border-radius: 6px;
+    border: 1px solid black;
+}
 
 .svg-credits-main {
     position   : absolute;
@@ -163,9 +179,9 @@ body {
 }
 
 .svg-credits-game {
-    position   : absolute;
+    /* position   : absolute;
     bottom     : 0;
-    left       : 0;
+    left       : 0; */
     color      : rgba(124, 143, 248, 0.411);
     font-family: "Comic Sans MS", "Comic Sans", cursive;
     font-size  : xx-small;
@@ -182,6 +198,8 @@ body {
 
 #letter-button {
     visibility: hidden;
+    display: flexbox;
+       
 }
 
 #shark-container-one {

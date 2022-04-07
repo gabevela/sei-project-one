@@ -46,13 +46,6 @@ letterBtnListEl.forEach(function (letterBtnEl) {
     guessedLetter = event.target.innerHTML;
     console.log("LINE 37 GUESSED LETTER:", guessedLetter);
     function onLetterPressDown() {
-      // for (let g = 0; g <= lengthOfSecrectWord; g++) {
-      //   if (i == lengthOfSecrectWord) {
-      //     console.log("player won!")
-      //   } else {
-      //     console.log("game in play")
-      //   }
-      // }
       let indexOfFirst = secretWord.indexOf(guessedLetter);
       if (indexOfFirst >= 0) {
         for (let j = 0; j < lengthOfSecrectWord; j++) {
