@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<head> 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,75 +10,71 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="index-game">
-    <div class="top-row">
-        <div id="game-title" class="game-title">
-            <div>SHARK ATTACK</div>
+<body>
+    <div class="cuerpo index-game">
+        <br>
+        <div class="top-row">
+            <br>
+            <div class="start-game-button">
+                <button data-start-game id="data-start-game">Start Game</button>
+            </div>
+            <a class="end-game-button" href="indexMain.html">
+                <button>End Game</button>
+            </a>
+            <div class="next-level-button">
+                <button id="next-level-button" onClick="document.location.reload(true)">Next Level</button>
+            </div>
         </div>
-        <div class="next-level-button">
-            <button id="next-level-button" onClick="document.location.reload(true)">Next Level</button>
+        <br>
+        <div class="shark-scuba-container">
+            <div class="shark-container-one" id="shark-container-one"><img src="assets/vecteezy/shark.png"></div>
+            <div class="shark-container-two" id="shark-container-two"><img src="assets/vecteezy/shark.png"></div>
+            <div class="shark-container-three" id="shark-container-three"><img src="assets/vecteezy/shark.png"></div>
+            <div class="shark-container-four" id="shark-container-four"><img src="assets/vecteezy/shark.png"></div>
+            <div class="scuba-container" id="scuba-container"><img src="assets/vecteezy/scuba.png"></div>
+            <div class="shark-container-five" id="shark-container-five"><img src="assets/vecteezy/sharkInverted.png">
+            </div>
         </div>
-        <div class="start-game-button">
-            <button data-start-game id="data-start-game">PLAY!</button>
+        <div id="game-status" class="game-status">
+            <div id="dead-title" class="dead-title">
+                <img src="assets/sharkAttackRed.png">
+            </div>
+            <div id="level-won" class="level-won">
+                <img src="assets/levelCleared.png">
+            </div>
         </div>
-        <a class="end-game-button" href="indexMain.html">
-            <button>End Game</button>
-        </a>
-    </div>
-    <br>
-    <div class="shark-scuba-container">
-        <div class="shark-container-one" id="shark-container-one"><img src="assets/vecteezy/shark.png"></div>
-        <div class="shark-container-two" id="shark-container-two"><img src="assets/vecteezy/shark.png"></div>
-        <div class="shark-container-three" id="shark-container-three"><img src="assets/vecteezy/shark.png"></div>
-        <div class="shark-container-four" id="shark-container-four"><img src="assets/vecteezy/shark.png"></div>
-        <div class="scuba-container" id="scuba-container"><img src="assets/vecteezy/scuba.png"></div>
-        <div class="shark-container-five" id="shark-container-five"><img src="assets/vecteezy/sharkInverted.png"></div>
-    </div>
-    <div id="game-status" class="game-status">
-        <div id="dead-title" class="dead-title">
-            <div>ATTACKED!!</div>
+        <div class="letter-dash-container" id="letter-placeholder"></div>
+        <div class="letter-button-container" id="letter-button">
+            <button data-letter id="Aa">A</button>
+            <button data-letter id="Bb">B</button>
+            <button data-letter id="Cc">C</button>
+            <button data-letter id="Dd">D</button>
+            <button data-letter id="Ee">E</button>
+            <button data-letter id="Ff">F</button>
+            <button data-letter id="Gg">G</button>
+            <button data-letter id="Hh">H</button>
+            <button data-letter id="Ii">I</button>
+            <button data-letter id="Jj">J</button>
+            <button data-letter id="Kk">K</button>
+            <button data-letter id="Ll">L</button>
+            <button data-letter id="Mm">M</button>
+            <button data-letter id="Nn">N</button>
+            <button data-letter id="Oo">O</button>
+            <button data-letter id="Pp">P</button>
+            <button data-letter id="Qq">Q</button>
+            <button data-letter id="Rr">R</button>
+            <button data-letter id="Ss">S</button>
+            <button data-letter id="Tt">T</button>
+            <button data-letter id="Uu">U</button>
+            <button data-letter id="Vv">V</button>
+            <button data-letter id="Ww">W</button>
+            <button data-letter id="Xx">X</button>
+            <button data-letter id="Yy">Y</button>
+            <button data-letter id="Zz">Z</button>
         </div>
-        <div id="level-won" class="level-won">
-            <div>LEVEL CLEARED</div>
-        </div>
-    </div>
-    <div class="letter-dash-container" id="letter-placeholder"></div>
-    <div class="letter-button-container" id="letter-button">
-        <button data-letter id="Aa">A</button>
-        <button data-letter id="Bb">B</button>
-        <button data-letter id="Cc">C</button>
-        <button data-letter id="Dd">D</button>
-        <button data-letter id="Ee">E</button>
-        <button data-letter id="Ff">F</button>
-        <button data-letter id="Gg">G</button>
-        <button data-letter id="Hh">H</button>
-        <button data-letter id="Ii">I</button>
-        <button data-letter id="Jj">J</button>
-        <button data-letter id="Kk">K</button>
-        <button data-letter id="Ll">L</button>
-        <button data-letter id="Mm">M</button>
-        <button data-letter id="Nn">N</button>
-        <button data-letter id="Oo">O</button>
-        <button data-letter id="Pp">P</button>
-        <button data-letter id="Qq">Q</button>
-        <button data-letter id="Rr">R</button>
-        <button data-letter id="Ss">S</button>
-        <button data-letter id="Tt">T</button>
-        <button data-letter id="Uu">U</button>
-        <button data-letter id="Vv">V</button>
-        <button data-letter id="Ww">W</button>
-        <button data-letter id="Xx">X</button>
-        <button data-letter id="Yy">Y</button>
-        <button data-letter id="Zz">Z</button>
-    </div>
-    <div class="credits-links">
-        <a class="svg-credits-game" target="_blank" rel="noopener noreferrer"
-            href="https://www.vecteezy.com/free-vector/deep-ocean">Under The Sea Background Vectors by Vecteezy</a>
-        <a class="svg-credits-game" target="_blank" rel="noopener noreferrer" href="https://www.zapsplat.com/">Sound
-            from
-            Zapsplat.com</a>
     </div>
     <script defer src="script.js"></script>
+
 </body>
 
 </html>

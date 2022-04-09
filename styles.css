@@ -4,8 +4,16 @@
 
 body {
     background-repeat  : no-repeat;
-    columns            : pink;
-    height             : 450px;
+    background-position: center;
+    background-repeat  : no-repeat;
+    background-size    : cover;
+    position           : relative;
+    background-color   : #cccccc;
+}
+
+.cuerpo {
+    background-repeat  : no-repeat;
+    height             : 700px;
     background-position: center;
     background-repeat  : no-repeat;
     background-size    : cover;
@@ -15,7 +23,7 @@ body {
 
 .index-main {
     display              : grid;
-    grid-template-rows   : 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows   : 80px 200px 100px;
     grid-template-columns: 1fr;
     background-image     : url("assets/vecteezy/oceanMain.svg");
     color                : rgb(17, 138, 160);
@@ -24,7 +32,7 @@ body {
     font-weight          : bolder;
 }
 
-.game-status{
+.game-status {
     display              : grid;
     grid-template-rows   : 1fr;
     grid-template-columns: 1fr;
@@ -33,32 +41,60 @@ body {
 .index-game {
     display              : grid;
     grid-template-columns: auto;
-    grid-template-rows   : 35px 10px 100px 10px 50px 10px 10px 10px 10px;
+    grid-template-rows   : 20px 80px 100px 10px 50px 10px 10px 10px 10px;
     background-image     : url("assets/vecteezy/oceanGame.svg");
     color                : navy;
 }
 
-.index-game-over {
-    display              : grid;
-    grid-template-columns: auto;
-    grid-template-rows   : 35px 10px 80px 10px 10px 10px 10px;
-    background-image     : url("assets/vecteezy/oceanGame.svg");
-    color                : rgb(134, 31, 0);
-}
-
-.top-row-main {
-    display              : grid;
-    grid-template-columns: 6fr 2fr;
-    align-items          : top;
-    justify-items        : center;
+.top-row button {
+    background-color: rgb(62, 106, 249);
+    border          : gray;
+    border-radius   : 15px;
+    padding         : 15px;
+    font-size       : 15px;
+    border          : 2px; 
 }
 
 .top-row {
     display              : grid;
-    max-width            : 100%;
-    grid-template-columns: 8fr 3fr 3fr 3fr 1fr 1fr 1fr;
+    grid-template-rows   : 100px;
+    grid-template-columns: 20px 90px 90px 90px 100px;
+    justify-content        : left;
+    align-content: center;
+}
+
+
+.top-row-main {
+    display              : grid;
+    grid-template-columns: auto;
+    grid-template-rows   : 140px 80px 200px;
+    align-items          : center;
     justify-items        : center;
 }
+
+#head-title img {
+    background-color: rgb(156, 236, 242);
+    border-radius   : 20px;
+    padding         : 20px;
+    width           : 500px;
+}
+
+#scuba-diver-main {
+    border-radius: 0%;
+    padding      : 0%;
+    width        : 900px;
+}
+
+.top-row-main button {
+    background-color: rgb(156, 236, 242);
+    border          : gray;
+    border-radius   : 34px;
+    padding         : 20px;
+    font-size       : 30px;
+    border          : 2px;
+}
+
+
 
 .game-title {
     font-family: "Comic Sans MS", "Comic Sans", cursive;
@@ -118,54 +154,54 @@ body {
 }
 
 .dead-title {
-    display      : grid;
-    font-family  : "Comic Sans MS", "Comic Sans", cursive;
-    font-size    : xx-large;
-    font-weight  : bolder;
-    color        : rgb(134, 31, 0);
+    display         : grid;
+    font-family     : "Comic Sans MS", "Comic Sans", cursive;
+    font-size       : xx-large;
+    font-weight     : bolder;
+    color           : rgb(134, 31, 0);
     /* align-content: center; */
-    justify-items: center;
+    justify-items   : center;
 }
 
 
 .level-won {
-    display      : grid;
-    font-family  : "Comic Sans MS", "Comic Sans", cursive;
-    font-size    : xx-large;
-    font-weight  : bolder;
-    color        : rgb(0, 134, 16);
+    display         : grid;
+    font-family     : "Comic Sans MS", "Comic Sans", cursive;
+    font-size       : xx-large;
+    font-weight     : bolder;
+    color           : rgb(0, 134, 16);
     /* align-content: center; */
-    justify-items: center;
+    justify-items   : center;
 }
 
-.letter-dash-container  {
+.letter-dash-container {
     align-items    : center;
     justify-content: center;
     flex-wrap      : wrap;
-    display: flex;
+    display        : flex;
 
 
 }
 
-.letter-dash-container > button {
+.letter-dash-container>button {
     background-color: whitesmoke;
-    padding-right: 20px;
-    align-items: center;
-    justify-items: center;
-    border-radius: 10px;
-    border: 1px solid black;
+    padding-right   : 20px;
+    align-items     : center;
+    justify-items   : center;
+    border-radius   : 10px;
+    border          : 1px solid black;
 }
 
-.letter-button-container >button {
-    text-align: center;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
+.letter-button-container>button {
+    text-align      : center;
+    align-items     : center;
+    align-content   : center;
+    justify-content : center;
     background-color: whitesmoke;
-    align-items: center;
-    justify-items: center;
-    border-radius: 6px;
-    border: 1px solid black;
+    align-items     : center;
+    justify-items   : center;
+    border-radius   : 6px;
+    border          : 1px solid black;
 }
 
 .svg-credits-main {
@@ -188,9 +224,9 @@ body {
     font-weight: 100;
 }
 
-.scuba-diver-main img{ 
-    size: 30px;
-    max-width: 20%;
+.scuba-diver-main img {
+    size      : 30px;
+    max-width : 20%;
     max-height: auto;
 
 
@@ -198,8 +234,8 @@ body {
 
 #letter-button {
     visibility: hidden;
-    display: flexbox;
-       
+    display   : flexbox;
+
 }
 
 #shark-container-one {

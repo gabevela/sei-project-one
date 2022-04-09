@@ -63,7 +63,6 @@ letterBtnListEl.forEach(function (letterBtnEl) {
               document.getElementById("shark-container-three").style.visibility = "hidden";
               document.getElementById("shark-container-four").style.visibility = "hidden";
               document.getElementById("scuba-container").style.visibility = "hidden";
-              document.getElementById("game-title").style.opacity = 0.15;
               document.getElementById("level-won").style.visibility = "visible";
               document.getElementById("next-level-button").style.visibility = "visible";
             }
@@ -93,7 +92,6 @@ letterBtnListEl.forEach(function (letterBtnEl) {
           document.getElementById("shark-container-three").style.visibility = "hidden";
           document.getElementById("shark-container-four").style.visibility = "hidden";
           document.getElementById("scuba-container").style.visibility = "hidden";
-          document.getElementById("game-title").style.opacity = 0.15;
           document.getElementById("shark-container-five").style.visibility = "visible";
           document.getElementById("dead-title").style.visibility = "visible";
         }
@@ -125,5 +123,4 @@ function startgame() {
   console.log("The secret word is:", secretWord, " at oceanAnimals array index:", r);
   blankDashesHint();
   return secretWord;
-};
-
+};  
