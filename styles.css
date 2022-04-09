@@ -41,7 +41,7 @@ body {
 .index-game {
     display              : grid;
     grid-template-columns: auto;
-    grid-template-rows   : 20px 80px 100px 10px 50px 10px 10px 10px 10px;
+    grid-template-rows   : 20px 80px 10px 200px 100px 60px 30px;
     background-image     : url("assets/vecteezy/oceanGame.svg");
     color                : navy;
 }
@@ -52,15 +52,15 @@ body {
     border-radius   : 15px;
     padding         : 15px;
     font-size       : 15px;
-    border          : 2px; 
+    border          : 2px;
 }
 
 .top-row {
     display              : grid;
     grid-template-rows   : 100px;
     grid-template-columns: 20px 90px 90px 90px 100px;
-    justify-content        : left;
-    align-content: center;
+    justify-content      : left;
+    align-content        : center;
 }
 
 
@@ -113,9 +113,22 @@ body {
     max-height: 25px;
 }
 
+.shark-dead-scuba {
+    display              : grid;
+    grid-template-columns: 1fr 1200px 1fr;
+    grid-template-rows   : 200px;
+    align-items        : center;
+    justify-items      : center;
+}
+
+.shark-dead-scuba img {
+    max-width: 400px;
+    max-height: 350px;
+}
+
 .shark-scuba-container {
     display              : grid;
-    grid-template-columns: .9fr 1.1fr 1.5fr 1.9fr 1fr 2fr 1fr 1fr;
+    grid-template-columns: 140px 60px 90px 120px 150px 180px 380px 10px;
     grid-template-rows   : auto;
     justify-items        : center;
     align-items          : center;
@@ -147,7 +160,7 @@ body {
 }
 
 .scuba-container img {
-    max-width      : 200%;
+    max-width      : 150%;
     max-height     : auto;
     justify-content: baseline;
     opacity        : 100%;
@@ -185,14 +198,26 @@ body {
 
 .letter-dash-container>button {
     background-color: whitesmoke;
-    padding-right   : 20px;
+    padding: 10px;
+    font-size: larger;
     align-items     : center;
     justify-items   : center;
     border-radius   : 10px;
     border          : 1px solid black;
 }
 
+.letter-button-grid-container {
+    text-align      : center;
+    align-items     : center;
+    align-content   : center;
+    justify-content : center;
+    align-items     : center;
+    justify-items   : center;
+    border-radius   : 6px;
+}
+
 .letter-button-container>button {
+    font-size: larger;
     text-align      : center;
     align-items     : center;
     align-content   : center;
@@ -256,11 +281,11 @@ body {
 
 #scuba-container {
     visibility: hidden;
+    max-height: 300px;
+    max-width : 180px;
 }
 
 #shark-container-five {
-    max-width : auto;
-    max-height: 200px;
     visibility: hidden;
 }
 
